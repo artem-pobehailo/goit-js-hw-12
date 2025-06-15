@@ -6,8 +6,8 @@
 // hideLoader(). Ця функція нічого не приймає, повинна прибирати клас для відображення лоадера. Нічого не повертає.
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
-const list = document.querySelector(`.gallery`);
+const loadMore = document.querySelector('.load-more');
+const list = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -26,7 +26,7 @@ export function createGallery(images) {
         comments,
         downloads,
       }) => `
-        <li>
+      <li>
           <a href="${largeImageURL}">
             <img src="${webformatURL}" alt="${tags}" />
           </a>
@@ -53,4 +53,12 @@ export function hideLoader() {
   if (loader) {
     loader.classList.remove('visible');
   }
+}
+
+export function showLoadMoreButton() {
+  loadMore.classList.remove('hidden');
+}
+
+export function hideLoadMoreButton() {
+  loadMore.classList.add('hidden');
 }

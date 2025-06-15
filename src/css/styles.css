@@ -87,3 +87,25 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.load-more {
+  border-radius: 8px;
+  border: 1px solid #4e75ff;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background: #6c8cff;
+}
+.load {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
